@@ -1,4 +1,7 @@
 /* Video */
+body {
+    background-color: black;
+}
 
 body,
 html {
@@ -50,12 +53,12 @@ html {
     font-weight: bolder;
     margin-top: 0px;
     opacity: 0;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 }
 
 #date {
     font-size: 4em;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     opacity: 0;
 }
 
