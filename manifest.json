@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "原神 啟動!",
+    "permissions": [
+        "tabs"
+    ],
+    "chrome_url_overrides": {
+        "newtab": "./newtab/newtab.html"
+    },
+    "description": "由原神帶你一起遨遊網路的世界！",
+    "version": "1.0.0",
+    "action": {
+        "default_popup": "./popup/popup.html",
+        "default_icon": "./Assets/Paimon-icon.png"
+    }
+}

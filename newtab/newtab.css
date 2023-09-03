@@ -1,0 +1,105 @@
+/* Video */
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+    z-index: -1;
+    /* Place the video behind other content */
+}
+
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    object-fit: cover;
+    /* Cover the entire container while maintaining aspect ratio */
+}
+
+/* Clock */
+
+#Time_Date {
+    text-align: center;
+    position: absolute;
+    top: 50vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Center the clock both horizontally and vertically */
+}
+
+#clock {
+    font-size: 12em;
+    font-weight: bolder;
+    margin-top: 0px;
+    opacity: 0;
+    color: rgb(0, 0, 0);
+}
+
+#date {
+    font-size: 4em;
+    color: rgb(0, 0, 0);
+    opacity: 0;
+}
+
+/* Search Bar */
+
+#search-container {
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    top: 50vh;
+    /* Adjust top to position the search bar below the clock */
+}
+
+#search-form {
+    width: 50vw;
+    display: flex;
+    flex-direction: row;
+    /* background-color: #000000; */
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 0px 0px 10px 0px #888888;
+    margin-top: 20px;
+    /* Add margin-top to create space below the clock */
+}
+
+#search-input {
+    width: 50vw;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 10px;
+    font-size: 16px;
+}
+
+#search-button {
+    background: url('../Assets/search-icon.png') center center no-repeat;
+    background-size: 50px 50px;
+    width: 40px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 10px;
+}

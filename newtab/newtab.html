@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../Assets/Paimon-icon.png">
+    <link rel="stylesheet" href="newtab.css">
+    <title>原神啟動!</title>
+</head>
+
+<body>
+
+    <div id="search-container">
+        <form id="search-form">
+            <input type="text" id="search-input" placeholder="Search Google">
+            <button type="submit" id="search-button"></button>
+        </form>
+    </div>
+
+    <div id="Time_Date">
+        <div id="date"></div>
+        <div id="clock"></div>
+    </div>
+
+
+    <audio id="myAudio" autoplay loop>
+        <source src="../Assets/Wanderer/Wanderer_Theme(Short).mov" type="audio/mpeg">
+        Your browser does not support the audio tag.
+    </audio>
+
+    <div class="video-container">
+        <video muted id="background-video">
+            <source src="../Assets/Wanderer/Wanderer_intro.mp4" type="video/mp4">
+            <source src="../Assets/Wanderer/Wanderer_loop.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <script src="./newtab.js"></script>
+</body>
+
+</html>
