@@ -3,6 +3,18 @@
 
 This is a Chrome Extension created by a fan of Genshin Impact. It can be freely downloaded and used.
 
+---------------------
+
+Current version 1.0.0
+Known issues:
+1. The sound is too loud and cannot be adjusted. (This issue is expected to be fixed in 1.0.1)
+
+目前版本1.0.0
+已知問題：
+1. 聲音太大聲並且無法調整 (此問題預計在1.0.1 修正)
+
+-------------
+
 Usage instructions:
 1. Open the Chrome browser.
 2. Click on the three dots in the upper right corner.
