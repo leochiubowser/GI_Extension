@@ -6,12 +6,10 @@ This is a Chrome Extension created by a fan of Genshin Impact. It can be freely 
 ---------------------
 
 Current version 1.0.0
+
 Known issues:
 1. The sound is too loud and cannot be adjusted. (This issue is expected to be fixed in 1.0.1)
 
-目前版本1.0.0
-已知問題：
-1. 聲音太大聲並且無法調整 (此問題預計在1.0.1 修正)
 
 -------------
 
@@ -28,7 +26,15 @@ Background music by tnbee https://www.youtube.com/@tnbee
 
 Video by Genshin Impact Official https://www.youtube.com/@GenshinImpact
 
+-------------
+
 這是一個由原神的粉絲創建的Chrome擴充應用程式，可以自由下載使用
+
+目前版本1.0.0
+
+已知問題：
+1. 聲音太大聲並且無法調整 (此問題預計在1.0.1 修正)
+
 
 使用方式:
 1. 打開Chrome瀏覽器
