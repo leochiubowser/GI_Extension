@@ -18,7 +18,7 @@ Usage instructions:
 2. Click on the three dots in the upper right corner.
 3. Select "Extensions" -> "Manage Extensions."
 4. Enable Developer mode in the upper right corner.
-5. Click on "Load unpacked" in the upper left corner.
+5. Click on "Load unpacked" in the upper left corner and load the unzip folder.
 6. Open a new tab.
 7. Select "Keep" in the opened page.
 
