@@ -1,31 +1,51 @@
+// popup.js
 document.addEventListener('DOMContentLoaded', function () {
+    // Get references to the HTML elements
     const musicSwitch = document.getElementById('musicSwitch');
+    const volumeSlider = document.getElementById('volumeSlider');
 
-    // Check if the user's preference is stored in local storage
-    const isMusicEnabled = localStorage.getItem('musicEnabled');
-
-    // If no setting is found or the setting is not a valid boolean, set the default value to "true" and update UI
-    if (isMusicEnabled !== 'true' && isMusicEnabled !== 'false') {
-        localStorage.setItem('musicEnabled', 'true');
-        musicSwitch.checked = true;
-    } else {
-        // Initialize the switch state based on the stored preference
-        musicSwitch.checked = isMusicEnabled === 'true';
+    // Function to save settings to local storage
+    function saveSettings() {
+        const settings = {
+            musicSwitch: musicSwitch.checked,
+            volume: volumeSlider.value
+        };
+        localStorage.setItem('extensionSettings', JSON.stringify(settings));
     }
 
-    // Function to toggle the music and update storage
-    function toggleMusic() {
-        const newState = musicSwitch.checked;
-        localStorage.setItem('musicEnabled', newState.toString());
+    // Function to load settings from local storage and set the musicSwitch state
+    function loadSettings() {
+        const savedSettings = JSON.parse(localStorage.getItem('extensionSettings')) || {};
 
-        // Perform logic to play/pause the music based on the newState
-        if (newState) {
-            // Play the music
-        } else {
-            // Pause the music
-        }
+        // Set the music switch state based on the saved settings or default to "on"
+        musicSwitch.checked = savedSettings.hasOwnProperty('musicSwitch') ? savedSettings.musicSwitch : true;
+
+        // Set the volume based on the saved settings or default to 100
+        volumeSlider.value = savedSettings.volume || 100;
     }
 
-    // Add a change event listener to the checkbox
-    musicSwitch.addEventListener('change', toggleMusic);
+    // Load settings from local storage when the popup is opened
+    loadSettings();
+
+    // Add a listener for the music switch
+    musicSwitch.addEventListener('change', function () {
+        const action = musicSwitch.checked ? 'play' : 'pause'; // Decide whether to play or pause based on the switch state
+        chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+            chrome.tabs.sendMessage(tabs[0].id, { action });
+        });
+
+        // Save the updated settings to local storage
+        saveSettings();
+    });
+
+    // Add a listener for the volume slider
+    volumeSlider.addEventListener('input', function () {
+        const volume = volumeSlider.value; // Get the current volume value
+        chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+            chrome.tabs.sendMessage(tabs[0].id, { action: 'volume', value: volume });
+        });
+
+        // Save the updated settings to local storage
+        saveSettings();
+    });
 });

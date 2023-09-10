@@ -1,9 +1,13 @@
 // Setting 
 
+const audio = document.getElementById('myAudio');
 const video = document.getElementById('background-video');
 const searchContainer = document.getElementById("search-container");
 var loop = true;
 var showTime = false;
+const savedSettings = JSON.parse(localStorage.getItem('extensionSettings')) || {};
+var audioSetting = savedSettings.hasOwnProperty('musicSwitch') ? savedSettings.musicSwitch : true;
+audio.volume = savedSettings.volume / 100 ? audio.value : 1; // Convert to a valid volume value between 0 and 1
 
 document.addEventListener('DOMContentLoaded', function () {
 
@@ -87,7 +91,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     //Audio
 
-    const audio = document.getElementById('myAudio');
 
     // Pause the audio when the page loses focus
     window.addEventListener('blur', function () {
@@ -98,14 +101,34 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Resume the audio when the page regains focus
     window.addEventListener('focus', function () {
-        if (audio.paused) {
+        if (audio.paused && audioSetting) {
             audio.play();
         }
     });
 
-    // Play the audio when the page loads (optional)
-    audio.play();
+    // load setting
 
+    // Add an event listener to receive messages from the popup
+    chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
+        if (message.action === 'play') {
+            audioSetting = true;
+            audio.play();
+        } else if (message.action === 'pause') {
+            audioSetting = false;
+            audio.pause();
+        } else if (message.action === 'volume') {
+            // Adjust the volume based on the value received from the popup
+            if (audio) {
+                const volume = parseFloat(message.value) / 100; // Convert the value to a decimal between 0 and 1
+                audio.volume = volume; // Set the volume
+            }
+        }
+    });
+
+
+    // Play the audio when the page loads
+    if (audioSetting)
+        audio.play();
 });
 
 
