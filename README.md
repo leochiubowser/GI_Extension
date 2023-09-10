@@ -13,6 +13,12 @@ Known issues:
 
 -------------
 
+Download v1.0.0:
+
+https://github.com/leochiubowser/GI_Extension/releases/download/v1.0.0/GI_Extension.zip
+
+-------------
+
 Usage instructions:
 1. Open the Chrome browser.
 2. Click on the three dots in the upper right corner.
@@ -35,6 +41,13 @@ Video by Genshin Impact Official https://www.youtube.com/@GenshinImpact
 已知問題：
 1. 聲音太大聲並且無法調整 (此問題預計在1.0.1 修正)
 
+-------------
+
+下載 v1.0.0:
+
+https://github.com/leochiubowser/GI_Extension/releases/download/v1.0.0/GI_Extension.zip
+
+-------------
 
 使用方式:
 1. 打開Chrome瀏覽器
