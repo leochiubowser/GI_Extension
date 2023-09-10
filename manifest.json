@@ -11,7 +11,7 @@
         "newtab": "./newtab/newtab.html"
     },
     "description": "由原神帶你一起遨遊網路的世界！",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "action": {
         "default_popup": "./popup/popup.html",
         "default_icon": "./Assets/Paimon-icon.png"
