@@ -8,7 +8,7 @@ var showTime = false;
 const savedSettings = JSON.parse(localStorage.getItem('extensionSettings')) || {};
 var audioSetting = savedSettings.hasOwnProperty('musicSwitch') ? savedSettings.musicSwitch : true;
 audio.volume = savedSettings.volume !== undefined ? parseFloat(savedSettings.volume) / 100 : 0.5;
-console.log(audio.volume)
+
 
 document.addEventListener('DOMContentLoaded', function () {
 
@@ -114,6 +114,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (message.action === 'play') {
             audioSetting = true;
             audio.play();
+            console.log("Hii")
         } else if (message.action === 'pause') {
             audioSetting = false;
             audio.pause();

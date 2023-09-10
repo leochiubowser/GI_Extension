@@ -27,6 +27,20 @@ document.addEventListener('DOMContentLoaded', function () {
     // Load settings from local storage when the popup is opened
     loadSettings();
 
+    // Function to check if audio should be played
+    function checkPlayAudio() {
+        const shouldPlay = musicSwitch.checked;
+
+        // Send a message to the content script in the new tab to play or pause audio
+        chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+            chrome.tabs.sendMessage(tabs[0].id, { action: shouldPlay ? 'play' : 'pause' });
+        });
+    }
+
+    // Call checkPlayAudio when the popup is opened to initialize the audio state
+    checkPlayAudio();
+
+
     // Add a listener for the music switch
     musicSwitch.addEventListener('change', function () {
         const action = musicSwitch.checked ? 'play' : 'pause'; // Decide whether to play or pause based on the switch state
