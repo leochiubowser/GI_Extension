@@ -28,6 +28,8 @@ Usage instructions:
 6. Open a new tab.
 7. Select "Keep" in the opened page.
 
+------------
+
 Background music by tnbee https://www.youtube.com/@tnbee
 
 Video by Genshin Impact Official https://www.youtube.com/@GenshinImpact
