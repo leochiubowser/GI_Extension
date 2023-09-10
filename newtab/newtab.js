@@ -114,7 +114,6 @@ document.addEventListener('DOMContentLoaded', function () {
         if (message.action === 'play') {
             audioSetting = true;
             audio.play();
-            console.log("Hii")
         } else if (message.action === 'pause') {
             audioSetting = false;
             audio.pause();
