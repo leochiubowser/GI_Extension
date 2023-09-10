@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
         musicSwitch.checked = savedSettings.hasOwnProperty('musicSwitch') ? savedSettings.musicSwitch : true;
 
         // Set the volume based on the saved settings or default to 100
-        volumeSlider.value = savedSettings.volume || 100;
+        volumeSlider.value = savedSettings.volume || 50;
     }
 
     // Load settings from local storage when the popup is opened

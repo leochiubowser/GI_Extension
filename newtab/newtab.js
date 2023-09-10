@@ -7,7 +7,8 @@ var loop = true;
 var showTime = false;
 const savedSettings = JSON.parse(localStorage.getItem('extensionSettings')) || {};
 var audioSetting = savedSettings.hasOwnProperty('musicSwitch') ? savedSettings.musicSwitch : true;
-audio.volume = savedSettings.volume / 100 ? audio.value : 1; // Convert to a valid volume value between 0 and 1
+audio.volume = savedSettings.volume !== undefined ? parseFloat(savedSettings.volume) / 100 : 0.5;
+console.log(audio.volume)
 
 document.addEventListener('DOMContentLoaded', function () {
 
