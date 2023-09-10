@@ -9,7 +9,7 @@ Current version 1.0.0
 
 Known issues:
 1. The sound is too loud and cannot be adjusted. (This issue is expected to be fixed in 1.0.1)
-
+2. The transition between the intro animation and loop animation of the character is not as fluent as expected. (Not sure if it can be fixed)
 
 -------------
 
@@ -40,6 +40,7 @@ Video by Genshin Impact Official https://www.youtube.com/@GenshinImpact
 
 已知問題：
 1. 聲音太大聲並且無法調整 (此問題預計在1.0.1 修正)
+2. 角色進場動畫和循環動畫的切換並不流暢（不確定是否可以修復）
 
 -------------
 
