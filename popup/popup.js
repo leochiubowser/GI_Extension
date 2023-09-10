@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // Set the music switch state based on the saved settings or default to "on"
         musicSwitch.checked = savedSettings.hasOwnProperty('musicSwitch') ? savedSettings.musicSwitch : true;
 
-        // Set the volume based on the saved settings or default to 100
+        // Set the volume based on the saved settings or default to 50
         volumeSlider.value = savedSettings.volume || 50;
     }
 
