@@ -7,8 +7,12 @@ var loop = true;
 var showTime = false;
 const savedSettings = JSON.parse(localStorage.getItem('extensionSettings')) || {};
 var audioSetting = savedSettings.hasOwnProperty('musicSwitch') ? savedSettings.musicSwitch : true;
-audio.volume = savedSettings.volume !== undefined ? parseFloat(savedSettings.volume) / 100 : 0.5;
-
+// audio.volume = savedSettings.volume !== undefined ? parseFloat(savedSettings.volume) / 100 : 0.5;
+if (audio && savedSettings.volume !== undefined) {
+    audio.volume = parseFloat(savedSettings.volume) / 100;
+} else {
+    audio.volume = 0.5; // Set a default volume value if no settings are found.
+}
 
 document.addEventListener('DOMContentLoaded', function () {
 
