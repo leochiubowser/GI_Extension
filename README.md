@@ -7,6 +7,9 @@ This is a Chrome Extension created by a fan of Genshin Impact. It can be freely 
 
 Current version 1.0.1
 
+Update:
+1. You can now change the volume of the audio in the extension window.
+
 Known issues:
 1. The transition between the intro animation and loop animation of the character is not as fluent as expected. (Not sure if it can be fixed)
 
@@ -39,9 +42,11 @@ Video by Genshin Impact Official https://www.youtube.com/@GenshinImpact
 
 目前版本1.0.1
 
+更新：
+1. 您可以在應用程式的視窗中調整聲音大小
+
 已知問題：
-1. 聲音太大聲並且無法調整 (此問題預計在1.0.1 修正)
-2. 角色進場動畫和循環動畫的切換並不流暢（不確定是否可以修復）
+1. 角色進場動畫和循環動畫的切換並不流暢（不確定是否可以修復）
 
 -------------
 
