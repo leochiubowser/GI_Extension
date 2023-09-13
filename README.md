@@ -5,17 +5,16 @@ This is a Chrome Extension created by a fan of Genshin Impact. It can be freely 
 
 ---------------------
 
-Current version 1.0.0
+Current version 1.0.1
 
 Known issues:
-1. The sound is too loud and cannot be adjusted. (This issue is expected to be fixed in 1.0.1)
-2. The transition between the intro animation and loop animation of the character is not as fluent as expected. (Not sure if it can be fixed)
+1. The transition between the intro animation and loop animation of the character is not as fluent as expected. (Not sure if it can be fixed)
 
 -------------
 
-Download v1.0.0:
+Download v1.0.1:
 
-https://github.com/leochiubowser/GI_Extension/releases/download/v1.0.0/GI_Extension.zip
+https://github.com/leochiubowser/GI_Extension/releases/download/v1.0.1/GI_Extension.zip
 
 -------------
 
@@ -38,7 +37,7 @@ Video by Genshin Impact Official https://www.youtube.com/@GenshinImpact
 
 這是一個由原神的粉絲創建的Chrome擴充應用程式，可以自由下載使用
 
-目前版本1.0.0
+目前版本1.0.1
 
 已知問題：
 1. 聲音太大聲並且無法調整 (此問題預計在1.0.1 修正)
@@ -46,9 +45,9 @@ Video by Genshin Impact Official https://www.youtube.com/@GenshinImpact
 
 -------------
 
-下載 v1.0.0:
+下載 v1.0.1:
 
-https://github.com/leochiubowser/GI_Extension/releases/download/v1.0.0/GI_Extension.zip
+https://github.com/leochiubowser/GI_Extension/releases/download/v1.0.1/GI_Extension.zip
 
 -------------
 
